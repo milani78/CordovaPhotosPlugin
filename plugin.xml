@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-ios-camera-inga" 
+version="0.0.1" 
+xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>PhotosPlugin</name>
+	
+    <js-module name="PhotosPlugin" src="www/PhotosPlugin.js">
+        <clobbers target="PhotosPlugin" />
+    </js-module>
+	
+	<platform name="ios">
+	  <config-file target="config.xml" parent="/*">
+		<feature name="PhotosPlugin">
+		  <param name="ios-package" value="PhotosPlugin" />
+		</feature>
+	  </config-file>
+	 
+	  <header-file src="src/ios/PhotosPlugin.h" />
+	  <source-file src="src/ios/PhotosPlugin.m" />
+	  <header-file src="src/ios/CustomCameraViewController.h" />
+	  <source-file src="src/ios/CustomCameraViewController.m" />
+	  
+	</platform>
+
+</plugin>
